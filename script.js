@@ -4,7 +4,9 @@ const slider = document.querySelector("#myRange");
 const gridToggler = document.querySelector(".toggle_grid");
 const gridSizeLabel = document.querySelector(".slidecontainer > label");
 const rainbowMode = document.querySelector(".rainbowMode");
+const defaultColorButton = document.querySelector("input[type='color']");
 let isRainbowActive = false;
+let defaultColor = "#000";
 const gridSize = 50;
 
 function drawGrid(size) {
@@ -26,6 +28,11 @@ function getRandomColor() {
   )}, ${Math.floor(Math.random() * 256 + 1)})`;
 }
 
+defaultColorButton.addEventListener(
+  "input",
+  (e) => (defaultColor = e.target.value)
+);
+
 rainbowMode.addEventListener("click", (e) => {
   toggleActiveClass(e);
   isRainbowActive = !isRainbowActive;
@@ -34,7 +41,9 @@ rainbowMode.addEventListener("click", (e) => {
 
 container.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("box")) {
-    e.target.style.backgroundColor = getRandomColor();
+    e.target.style.backgroundColor = isRainbowActive
+      ? getRandomColor()
+      : defaultColor;
   }
 });
 
