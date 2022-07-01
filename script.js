@@ -17,3 +17,8 @@ window.addEventListener("load", () => {
   drawGrid(gridSize);
 });
 
+function getRandomColor() {
+    return `rgb(${Math.floor(Math.random() * 256 + 1)}, ${Math.floor(
+      Math.random() * 256 + 1
+    )}, ${Math.floor(Math.random() * 256 + 1)})`;
+  }
