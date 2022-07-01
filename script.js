@@ -37,3 +37,10 @@ slider.addEventListener("change", (e) => {
   container.style.cssText = `display: grid;grid-template-columns: repeat(${newGridSize}, 1fr);grid-template-rows: repeat(${newGridSize}, 1fr);`;
   drawGrid(newGridSize);
 });
+
+
+const boxes = document.querySelector(".container").childNodes;
+
+gridToggler.addEventListener("click", () =>
+  boxes.forEach((box) => box.classList.toggle("box_border"))
+);
