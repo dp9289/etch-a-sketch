@@ -38,11 +38,17 @@ slider.addEventListener("change", (e) => {
   drawGrid(newGridSize);
 });
 
+function toggleActiveClass(e) {
+  e.currentTarget.classList.toggle("active");
+}
+
 const boxes = document.querySelector(".container").childNodes;
 
 gridToggler.addEventListener("click", () =>
   boxes.forEach((box) => box.classList.toggle("box_border"))
 );
+
+gridToggler.addEventListener("click", toggleActiveClass);
 
 clearButton.addEventListener("click", () => {
   boxes.forEach((box) => (box.style.backgroundColor = "#fff"));
