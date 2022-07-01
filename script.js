@@ -3,6 +3,8 @@ const clearButton = document.querySelector(".clear");
 const slider = document.querySelector("#myRange");
 const gridToggler = document.querySelector(".toggle_grid");
 const gridSizeLabel = document.querySelector(".slidecontainer > label");
+const rainbowMode = document.querySelector(".rainbowMode");
+let isRainbowActive = false;
 const gridSize = 50;
 
 function drawGrid(size) {
@@ -23,6 +25,12 @@ function getRandomColor() {
     Math.random() * 256 + 1
   )}, ${Math.floor(Math.random() * 256 + 1)})`;
 }
+
+rainbowMode.addEventListener("click", (e) => {
+  toggleActiveClass(e);
+  isRainbowActive = !isRainbowActive;
+  console.log(!isRainbowActive);
+});
 
 container.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("box")) {
