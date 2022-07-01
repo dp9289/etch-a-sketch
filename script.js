@@ -18,7 +18,13 @@ window.addEventListener("load", () => {
 });
 
 function getRandomColor() {
-    return `rgb(${Math.floor(Math.random() * 256 + 1)}, ${Math.floor(
-      Math.random() * 256 + 1
-    )}, ${Math.floor(Math.random() * 256 + 1)})`;
+  return `rgb(${Math.floor(Math.random() * 256 + 1)}, ${Math.floor(
+    Math.random() * 256 + 1
+  )}, ${Math.floor(Math.random() * 256 + 1)})`;
+}
+
+container.addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("box")) {
+    e.target.style.backgroundColor = getRandomColor();
   }
+});
