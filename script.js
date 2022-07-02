@@ -6,7 +6,7 @@ const gridSizeLabel = document.querySelector(".slidecontainer > label");
 const rainbowMode = document.querySelector(".rainbowMode");
 const defaultColorButton = document.querySelector("input[type='color']");
 let isRainbowActive = false;
-let defaultColor = "#000";
+let defaultColor = "#3bbaa5";
 const gridSize = 50;
 
 function drawGrid(size) {
