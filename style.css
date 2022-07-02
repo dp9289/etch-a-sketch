@@ -4,45 +4,69 @@ body {
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
-  background-color: hsl(236, 86%, 89%);
+  background-color: #222831;
   font-family: "Roboto", sans-serif;
 }
+
 h1 {
+  /* color: hsl(236, 86%, 89%); */
+  color: #00adb5;
   text-align: center;
-  padding: 20px 0;
   font-size: 35px;
 }
+
 main {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px 0;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  gap: 40px;
 }
+
 .controls {
-  width: 35%;
+  width: 300px;
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-.controls > div {
-  max-width: 50%;
+  /* border: 2px solid ECB390; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.315);
+  align-items: center;
+  padding: 30px 0;
+  border-radius: 10px;
 }
 
+/* .controls > div {
+  max-width: 50%;
+} */
+
 label {
-  font-size: 16px;
+  font-size: 17px;
   /* display: block; */
+  color: #00adb5;
 }
+
+.defaultColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 button {
   padding: 10px 15px;
   width: 150px;
   font-size: 16px;
-  border: 2px solid grey;
+  border: 2px solid #00adb5;
   outline: none;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 10px 0;
   transition: all 0.2s ease;
+  background-color: transparent;
+  color: #00adb5;
+  font-weight: 500;
 }
+
 input[type="color"] {
   appearance: none;
   -moz-appearance: none;
@@ -53,10 +77,16 @@ input[type="color"] {
   width: 35px;
   background: none;
   cursor: pointer;
+  border: 0px;
+}
+.slidecontainer > label {
+  margin: 7px 0;
 }
 .container {
   width: 500px;
   height: 500px;
+  padding: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.315);
 }
 
 .box {
@@ -66,13 +96,13 @@ input[type="color"] {
   border: 1px solid rgba(221, 220, 220, 0.849);
 }
 .clearBg {
-  background-color: grey;
+  background-color: white;
 }
 
 .slider {
   -webkit-appearance: none;
-  height: 10px;
-  border: 2px solid black;
+  height: 5px;
+  border: 2px solid #fff;
   outline: none;
   opacity: 0.7;
   border-radius: 10px;
@@ -83,20 +113,23 @@ input[type="color"] {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: hsl(253, 50%, 60%);
+  background: #00adb5;
+  border: 2px solid #fff;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .active {
-  background-color: hsl(236, 86%, 79%);
-  border: 2px solid black;
+  background-color: #00adb5;
+  border: 2px solid white;
+  color: #222831;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: hsl(236, 86%, 79%);
-  border: 2px solid black;
+  background-color: #00adb5;
+  border: 2px solid #fff;
+  color: #222831;
   transform: scale(1.05);
 }
 
@@ -106,8 +139,5 @@ button:hover {
   }
   .controls {
     margin-top: 20px;
-  }
-  .slider {
-    width: 50%;
   }
 }
